@@ -15,6 +15,15 @@ body {
     height: 100px;
 }
 
+.note_box{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
 .createNote{
     background-color: #2a8c56;
     height: 20px;

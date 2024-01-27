@@ -1,6 +1,6 @@
 const notesContainer = document.getElementById("home");
 console.log(notesContainer);
-//dragElement(notesContainer);
+
 
 const createNoteButton = notesContainer.querySelector('.createNote'); // update w/ name of button in css or html
 
@@ -15,7 +15,7 @@ getNotes().forEach((note) => {
 createNoteButton.addEventListener("click", () => addNotes()); // gets notified about when button is pressed
 
 function getNotes() {
-    return JSON.parse(localStorage.getItem("stickynotes") || "[]");
+    return JSON.parse(localStorage.getItem("stickynotes") || "[]" );
 }
 
 function saveNotes(notes) {
@@ -23,12 +23,16 @@ function saveNotes(notes) {
 }
 
 function createNotes(id, content) {
-    const element = document.createElement("textarea");
-    
+    const element = document.createElement("div");
+    element.classList.add("note_box");
+    const note = document.createElement("textarea");
+    note.classList.add("note");
+    note.value = content;
+    note.placeholder = "empty note"; // should be replaced with api call 
 
-    element.classList.add("note");
-    element.value = content;
-    element.placeholder = "empty note"; // should be replaced with api call 
+    element.appendChild(note);
+    document.body.appendChild(element);
+     
 
     element.addEventListener("change", () => {
         updateNotes(id, element.value); // updates the notes 
@@ -37,6 +41,8 @@ function createNotes(id, content) {
     element.addEventListener("dblclick", () => {
         deleteNotes(id, element); // updates the notes 
     });
+
+    dragElement(element);
 
     return element;
 }
@@ -67,48 +73,35 @@ function updateNotes(id, newEdits) {
 }
 
 function deleteNotes(id, element) {
-    const notes = getNotes().filter((note) => note.id != id)[0];
+    const notes = getNotes().filter((note) => note.id != id);
 
     saveNotes(notes);
     notesContainer.removeChild(element);
 }
 
-// function dragElement(element){
-//     var position1 = 0;
-//     var position2 = 0;
-//     var position3 = 0;
-//     var position4 = 0;
-//     if (document.getElementById(element.id)) {
-//         document.getElementById(element.id).onmousedown = dragMouseDown;
-//       } else {
-//         element.onmousedown = dragMouseDown;
-//       }
-// }
+// makes elements draggable
+function dragElement(element) {
+    let offsetX, offsetY;
 
-// function dragMouseDown(e) {
-//     e.preventDefault();
-//     // get the mouse cursor position at startup:
-//     pos3 = e.clientX;
-//     pos4 = e.clientY;
-//     document.onmouseup = closeDragElement;
-//     // call a function whenever the cursor moves:
-//     document.onmousemove = elementDrag;
-//   }
+    element.addEventListener('mousedown', function (e) {
+      offsetX = e.clientX - element.getBoundingClientRect().left;
+      offsetY = e.clientY - element.getBoundingClientRect().top;
 
-//   function elementDrag(e) {
-//     e.preventDefault();
-//     // calculate the new cursor position:
-//     pos1 = pos3 - e.clientX;
-//     pos2 = pos4 - e.clientY;
-//     pos3 = e.clientX;
-//     pos4 = e.clientY;
-//     // set the element's new position:
-//     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-//     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-//   }
+      document.addEventListener('mousemove', dragElement);
+      document.addEventListener('mouseup', stopDragging);
+    });
 
-//   function closeDragElement() {
-//     // stop moving when mouse button is released:
-//     document.onmouseup = null;
-//     document.onmousemove = null;
-//   }
+    function dragElement(e) {
+      const x = e.clientX - offsetX;
+      const y = e.clientY - offsetY;
+
+      element.style.left = x + 'px';
+      element.style.top = y + 'px';
+    }
+
+    function stopDragging() {
+      document.removeEventListener('mousemove', dragElement);
+      document.removeEventListener('mouseup', stopDragging);
+    }
+  
+}
