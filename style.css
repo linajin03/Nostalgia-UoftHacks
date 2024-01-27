@@ -1,0 +1,81 @@
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: Arial;
+}
+
+h1 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 40pt;
+  margin-left: 30px;
+}
+
+h2 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 20pt;
+  margin-left: 25px;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-weight: bold;
+  padding: 10px;
+  font-size: medium;
+  margin-left: 13px;
+}
+
+#logo {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  display: block;
+  height: 100px;
+  width: 100px;
+}
+
+p {
+  font-size: x-small;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 0 10px;
+  width: 180px;
+  height: 200px;
+  margin-bottom: 40px;
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#fold_title {
+  margin-bottom: 0;
+}
+
+#slogan {
+  font-size: 15pt;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#folder {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+
+
