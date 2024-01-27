@@ -1,0 +1,22 @@
+body {
+    margin: auto;
+    background: #ff4d4d;
+}
+
+#home {
+    display: grid;
+    gap: 24 px;
+    padding: 24px;
+}
+
+.note{
+    background-color: #f0ff6c;
+    padding: 20px;
+    height: 100px;
+}
+
+.createNote{
+    background-color: #2a8c56;
+    height: 20px;
+    width: 20px;
+}
