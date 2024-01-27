@@ -15,7 +15,7 @@ getNotes().forEach((note) => {
 createNoteButton.addEventListener("click", () => addNotes()); // gets notified about when button is pressed
 
 function getNotes() {
-    return JSON.parse(localStorage.getItem("stickynotes") || "[]")
+    return JSON.parse(localStorage.getItem("stickynotes") || "[]");
 }
 
 function saveNotes(notes) {
@@ -59,6 +59,7 @@ function addNotes() {
 function updateNotes(id, newEdits) {
     const notes = getNotes();
     const targetNote = notes.filter((note) => note.id == id)[0];
+    console.log(targetNote.content);
 
     targetNote.content = newEdits;
     saveNotes(notes);
