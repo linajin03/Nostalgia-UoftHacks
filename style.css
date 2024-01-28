@@ -11,6 +11,12 @@ body{
   color: black;
 }
 
+p {
+  font-size: 10pt;
+  text-align: center;
+  font-weight: bold;
+}
+
 @keyframes highlight {
   from {
     background-position: 0;
@@ -29,6 +35,8 @@ body{
   
   background-image: linear-gradient(to right, transparent 50%, #FEFF9C 50%), 
                     linear-gradient(to left, #FEFF9C 50%, transparent 50%);
+}
+
 .title {
   font-weight: bold;
   font-size: 50pt;
@@ -91,5 +99,9 @@ body{
 
 .purple{
   background-color: #CFCBFF;
+}
+
+.back {
+  margin-top: 100px;
 }
   
