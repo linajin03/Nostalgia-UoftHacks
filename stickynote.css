@@ -1,0 +1,52 @@
+body {
+    margin: auto;
+    background: #ffff;
+    justify-content: center;
+    align-items: center;
+}
+
+#home {
+    display: flex;
+    gap: 24 px;
+    padding: 24px;
+    align-items: center;
+}
+
+.note{
+    background-color: #f0ff6c;
+    padding: 20px;
+    height: 100px;
+}
+
+.note_box{
+    position: absolute;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.initialPosition {
+    right: 50px; /* Set the initial left position */
+    top: 50px;  /* Set the initial top position */
+  }
+
+.createNote{
+    background-color: #2a8c56;
+    height: 100px;
+    width: 600px;
+    position: fixed;
+    bottom: 10px;
+    align-self: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+iframe {
+    width: 50%; /* Set the width of the iframe */
+    height: 4000px; /* Set the height of the iframe */
+    align-self: center;
+    align-items: center;
+    border:none;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
