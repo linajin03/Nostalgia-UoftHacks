@@ -1,0 +1,6 @@
+.folder {
+  height: 179px;
+  width: 223px;
+  background-color: #A9EDF1;
+  clip-path: polygon(0 0, 60% 0, 60% 17%, 100% 17%, 100% 100%, 0 100%);
+}
