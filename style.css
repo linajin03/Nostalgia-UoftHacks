@@ -11,6 +11,24 @@ body{
   color: black;
 }
 
+@keyframes highlight {
+  from {
+    background-position: 0;
+  }
+
+  to {
+    background-position: -100%;
+  }
+}
+
+.highlight {
+  animation-name: highlight;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  background-size: 200%;
+  
+  background-image: linear-gradient(to right, transparent 50%, #FEFF9C 50%), 
+                    linear-gradient(to left, #FEFF9C 50%, transparent 50%);
 .title {
   font-weight: bold;
   font-size: 50pt;
