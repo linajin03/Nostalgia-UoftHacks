@@ -7,7 +7,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: black;
 }
 
@@ -29,6 +29,10 @@ body{
   
   background-image: linear-gradient(to right, transparent 50%, #FEFF9C 50%), 
                     linear-gradient(to left, #FEFF9C 50%, transparent 50%);
+.title {
+  font-weight: bold;
+  font-size: 50pt;
+  margin-left: 30px;
 }
 
 .welcome {
@@ -41,17 +45,19 @@ body{
   pointer-events: none;
   display: flex;
   margin-right: 0;
-  margin-left: 50%;
+  margin-left: 25%;
+  margin-bottom: 10px;
+  justify-content: right;
 }
 
 .folder {
-  height: 179px;
-  width: 223px;
+  height: 160px;
+  width: 200px;
   clip-path: polygon(0 0, 60% 0, 60% 17%, 100% 17%, 100% 100%, 0 100%);
 }
 
 .folder-container {
-  padding: 1.5vw;
+  padding: 1vw;
 }
 
 .file {
@@ -71,6 +77,8 @@ body{
 
 .text-left{
   text-align: left;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .blue{
