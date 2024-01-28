@@ -23,7 +23,7 @@ const Homepage = () => {
             </div>
             
             <div className="container-fluid">
-                <div className="col-12 mb-10 text-center">
+                <div className="col-12 mb-10 text-left">
                     <h1 className="fw-bold">recently accessed files</h1>
                 </div>
                 <div className="row">
