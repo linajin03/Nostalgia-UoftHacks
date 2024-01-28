@@ -27,7 +27,7 @@ async function summarizeText ( inputText ) {
       }
 
 }
-const userInputText = "Cats, known for their independent and mysterious nature, have captivated human hearts for centuries. With their elegant yet playful demeanor, these feline companions seamlessly blend grace and curiosity. Their soft fur, often adorned in a myriad of colors and patterns, conceals a stealthy agility that defines their every movement. Cats, revered in various cultures as symbols of luck, wisdom, or companionship, effortlessly navigate the delicate balance between affectionate snuggles and enigmatic solitude. Whether lazily basking in the warm sunlight or engaging in acrobatic displays of agility, these enigmatic creatures enchant us with their charm. The soothing purr of a content cat, a melodic symphony that transcends language, serves as a testament to the profound connection shared between humans and these captivating creatures. As they gracefully tread the line between aloofness and devotion, cats continue to reign supreme as cherished companions, weaving their enchanting tales into the fabric of our lives."; // example from cohere
+const userInputText = "This booklet contains information about how to prepare, where to find food and refreshments, a list of workshops and meetups, and key contact information. We wish every hacker the very best during this weekend, and if you require assistance during the weekend of, please visit the Help Desk on the first floor."; // example from cohere
 
 var result = null;
 
