@@ -1,0 +1,67 @@
+body{
+  font-family: 'Inter', sans-serif;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  background-color: rgb(255, 255, 255);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.welcome {
+  display: flex;
+  margin-top: 5vh;
+}
+
+.logo{
+  height: 20vmin;
+  pointer-events: none;
+  display: flex;
+  margin-right: 0;
+  margin-left: 50%;
+}
+
+.folder {
+  height: 179px;
+  width: 223px;
+  clip-path: polygon(0 0, 60% 0, 60% 17%, 100% 17%, 100% 100%, 0 100%);
+}
+
+.folder-container {
+  padding: 1.5vw;
+}
+
+.file {
+  height: 205px;
+  width: 144px;
+  background-color: #A9EDF1;
+}
+
+.file-container {
+  padding: 1.5vw;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.blue{
+  background-color: #A9EDF1;
+}
+
+.green{
+  background-color: #6EE488;
+}
+
+.purple{
+  background-color: #CFCBFF;
+}
+  
