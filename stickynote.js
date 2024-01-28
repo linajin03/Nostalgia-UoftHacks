@@ -57,7 +57,7 @@ getNotes().forEach((note) => {
 });
 
 
-createNoteButton.addEventListener("click", () => createNotes()); // gets notified about when button is pressed
+createNoteButton.addEventListener("click", () => addNotes()); // gets notified about when button is pressed
 
 function getNotes() {
     return JSON.parse(localStorage.getItem("stickynotes") || "[]" );
