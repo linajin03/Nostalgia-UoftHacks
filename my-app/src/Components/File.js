@@ -2,28 +2,30 @@ import React from "react";
 
 const File = ({ item }) => {
     return (
-        <>
-            <div className="row">
+        <div className="container-fluid">
+            <div className="row justify-content-center">
                 {item.map((Val) => {
                     return (
-                    <a href={Val.link}>
-                        <div className="file"></div>
-                        <div 
-                            className="col-md-4 col-sm-6 card my-3 mx-3 py-3 border-3 border border-dark rounded-3 card-container d-flex align-items-stretch"
-                            key={Val.id}
-                        >
-                            <div className="card-body d-flex flex-column">
-                            <div className="card-title fw-bold fs-4">
-                                {Val.title}
-                            </div>
-                            </div>
-                        </div>  
-                    </a>
+                    <div className="file-container">
+                        <a href={Val.link}>
+                            <div className="file"></div>
+                            <div 
+                                className=""
+                                key={Val.id}
+                            >
+                                <div className="">
+                                <div className="">
+                                    {Val.title}
+                                </div>
+                                </div>
+                            </div>  
+                        </a>
+                    </div>
                     
                     );
                 })}
             </div>
-        </>
+        </div>
     );
 }
 
