@@ -1,0 +1,95 @@
+body{
+  font-family: 'Inter', sans-serif;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  background-color: rgb(255, 255, 255);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: black;
+}
+
+@keyframes highlight {
+  from {
+    background-position: 0;
+  }
+
+  to {
+    background-position: -100%;
+  }
+}
+
+.highlight {
+  animation-name: highlight;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  background-size: 200%;
+  
+  background-image: linear-gradient(to right, transparent 50%, #FEFF9C 50%), 
+                    linear-gradient(to left, #FEFF9C 50%, transparent 50%);
+.title {
+  font-weight: bold;
+  font-size: 50pt;
+  margin-left: 30px;
+}
+
+.welcome {
+  display: flex;
+  margin-top: 5vh;
+}
+
+.logo{
+  height: 20vmin;
+  pointer-events: none;
+  display: flex;
+  margin-right: 0;
+  margin-left: 25%;
+  margin-bottom: 10px;
+  justify-content: right;
+}
+
+.folder {
+  height: 160px;
+  width: 200px;
+  clip-path: polygon(0 0, 60% 0, 60% 17%, 100% 17%, 100% 100%, 0 100%);
+}
+
+.folder-container {
+  padding: 1vw;
+}
+
+.file {
+  height: 205px;
+  width: 144px;
+  background-color: #A9EDF1;
+}
+
+.file-container {
+  padding: 1.5vw;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.text-left{
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.blue{
+  background-color: #A9EDF1;
+}
+
+.green{
+  background-color: #6EE488;
+}
+
+.purple{
+  background-color: #CFCBFF;
+}
+  
