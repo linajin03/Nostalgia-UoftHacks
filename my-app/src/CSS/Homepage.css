@@ -1,13 +1,14 @@
 .welcome {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 5vh;
 }
 
 .logo{
   height: 20vmin;
   pointer-events: none;
   display: flex;
+  margin-right: 0;
+  margin-left: 50%;
 }
 
 .folder {
