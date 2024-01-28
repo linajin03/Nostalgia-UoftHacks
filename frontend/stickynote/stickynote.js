@@ -1,3 +1,46 @@
+// call api 
+import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
+
+
+async function summarizeText ( inputText ) {
+    const options = {
+        method: 'POST',
+        url: 'https://api.cohere.ai/v1/summarize',
+        headers: {
+          accept: 'application/json', 
+        'content-type': 'application/json', 
+        authorization: 'Bearer '},
+        data: {text: inputText, length: 'short', format: 'bullets', extractiveness: 'low', temperature: 0.3}
+      };
+      
+      var result = null;
+      try {
+        const response = await axios.request(options);
+        //console.log(response.data);
+        return response.data.summary;
+      } catch (error) {
+        console.error(error);
+        throw error; 
+      }
+
+}
+const userInputText = "Ice cream is a sweetened. It is really sweet and tastes good. However, some people may be lactose intolerant. As a result, many people rely on alternative options instead. Ice cream is a sweetened. It is really sweet and tastes good. However, some people may be lactose intolerant. As a result, many people rely on alternative options instead. Ice cream is a sweetened. It is really sweet and tastes good. However, some people may be lactose intolerant. As a result, many people rely on alternative options instead."; // example from cohere
+
+var result = null;
+
+async function run() {
+  try {
+    result = await summarizeText(userInputText);
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+run();
+
+
+
 const notesContainer = document.getElementById("home");
 console.log(notesContainer);
 
@@ -5,12 +48,15 @@ console.log(notesContainer);
 const createNoteButton = notesContainer.querySelector('.createNote'); // update w/ name of button in css or html
 
 const title = ''  // add api call
-const note = '' // api call
+
+
 
 getNotes().forEach((note) => {
     const noteElement = createNotes(note.id, note.content);
     notesContainer.insertBefore(noteElement, createNoteButton);
 });
+
+
 
 createNoteButton.addEventListener("click", () => addNotes()); // gets notified about when button is pressed
 
@@ -27,8 +73,7 @@ function createNotes(id, content) {
     element.classList.add("note_box");
     const note = document.createElement("textarea");
     note.classList.add("note");
-    note.value = content;
-    note.placeholder = "empty note"; // should be replaced with api call 
+    note.value = result; // should be replaced with api call 
 
     element.appendChild(note);
     document.body.appendChild(element);
