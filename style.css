@@ -7,8 +7,14 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: black;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 45pt;
+  margin-left: 30px;
 }
 
 .welcome {
@@ -21,7 +27,9 @@ body{
   pointer-events: none;
   display: flex;
   margin-right: 0;
-  margin-left: 50%;
+  margin-left: 30%;
+  margin-bottom: 10px;
+  justify-content: right;
 }
 
 .folder {
@@ -31,7 +39,7 @@ body{
 }
 
 .folder-container {
-  padding: 1.5vw;
+  padding: 1vw;
 }
 
 .file {
@@ -51,6 +59,8 @@ body{
 
 .text-left{
   text-align: left;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .blue{
